@@ -25,14 +25,13 @@ export default function HomePage() {
           {/* User Profile */}
           <div className="md:w-1/3 mb-8 md:mb-0">
             <div className="w-48 h-48 rounded-full overflow-hidden mx-auto mb-4 bg-gray-200">
-              <Image src="/next.svg" alt="Profile" width={192} height={192} />
+              <Image src="/proPic.png" alt="Profile" width={192} height={192} />
             </div>
-            <h1 className="text-2xl font-bold text-center">Your Name</h1>
           </div>
 
           {/* Description */}
           <div className="md:w-2/3 md:pl-8">
-            <div className="bg-white dark:bg-black bg-opacity-80 dark:bg-opacity-80 p-6 rounded-lg shadow-lg">
+            <div className="bg-white dark:bg-black text-black dark:text-white bg-opacity-80 dark:bg-opacity-80 p-6 rounded-lg shadow-lg">
               <h2 className="text-xl font-semibold mb-4">Why me</h2>
               <p className="text-lg">
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio, accusamus! Explicabo, veritatis! Ratione, rem! Blanditiis optio et odit esse provident.
