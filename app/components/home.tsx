@@ -17,7 +17,7 @@ const skills = [
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen relative bg-white dark:bg-gray-900">
+    <div className="min-h-screen relative bg-white dark:bg-slate-950">
       <RandomLines />
 
       <div className="container mx-auto px-4 py-8 relative z-10">
@@ -32,7 +32,7 @@ export default function HomePage() {
 
           {/* Description */}
           <div className="md:w-2/3 md:pl-8">
-            <div className="bg-white dark:bg-gray-800 bg-opacity-80 dark:bg-opacity-80 p-6 rounded-lg shadow-lg">
+            <div className="bg-white dark:bg-black bg-opacity-80 dark:bg-opacity-80 p-6 rounded-lg shadow-lg">
               <h2 className="text-xl font-semibold mb-4">Why me</h2>
               <p className="text-lg">
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio, accusamus! Explicabo, veritatis! Ratione, rem! Blanditiis optio et odit esse provident.
@@ -42,7 +42,7 @@ export default function HomePage() {
         </div>
 
         {/* Skills Container */}
-        <div className="w-full max-w-6xl mx-auto p-6 rounded-lg bg-white dark:bg-gray-800 bg-opacity-80 dark:bg-opacity-80 shadow-lg">
+        <div className="w-full max-w-6xl mx-auto p-6 rounded-lg bg-white dark:bg-black bg-opacity-80 dark:bg-opacity-80 shadow-lg">
           <h2 className="text-xl font-semibold mb-4 text-center">Skills</h2>
           <div className="flex flex-wrap justify-center">
             {skills.map((skill, index) => (

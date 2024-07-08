@@ -7,13 +7,13 @@ export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="bg-white shadow-lg">
+    <nav className="bg-white shadow-lg dark:bg-black">
       <div className="max-w-6xl mx-auto px-4">
         <div className="flex justify-between">
           <div className="flex space-x-7">
             <div>
               <Link href="/" className="flex items-center py-4 px-2">
-                <span className="font-semibold text-gray-500 text-lg hover:text-green-500">&lt;Gianni /&gt;</span>
+                <span className="font-semibold text-gray-500 text-lg hover:text-green-500 dark:text-white">&lt;Gianni /&gt;</span>
               </Link>
             </div>
           </div>
@@ -25,7 +25,7 @@ export const Navbar = () => {
           <div className="md:hidden flex items-center">
             <button className="outline-none mobile-menu-button" onClick={() => setIsOpen(!isOpen)}>
               <svg
-                className="w-6 h-6 text-gray-500 hover:text-green-500"
+                className="w-6 h-6 text-gray-500 hover:text-green-500 dark:text-white"
                 fill="none"
                 strokeLinecap="round"
                 strokeLinejoin="round"
