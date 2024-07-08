@@ -6,7 +6,10 @@ import Link from 'next/link';
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
+  const handleMenuToggle = () => setIsOpen(!isOpen);
+
   return (
+    <>
     <nav className="bg-white shadow-lg dark:bg-black">
       <div className="max-w-6xl mx-auto px-4">
         <div className="flex justify-between">
@@ -23,7 +26,7 @@ export const Navbar = () => {
             <Link href="/contact" className="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300">Contact Me</Link>
           </div>
           <div className="md:hidden flex items-center">
-            <button className="outline-none mobile-menu-button" onClick={() => setIsOpen(!isOpen)}>
+            <button className="outline-none mobile-menu-button focus:outline-none" onClick={handleMenuToggle}>
               <svg
                 className="w-6 h-6 text-gray-500 hover:text-green-500 dark:text-white"
                 fill="none"
@@ -43,11 +46,24 @@ export const Navbar = () => {
           </div>
         </div>
       </div>
-      <div className={`md:hidden ${isOpen ? "block" : "hidden"}`}>
+    </nav>
+
+    {isOpen && (
+      <div
+        className='fixed inset-0 bg-black bg-opacity-50 z-40 transition-opacity duration-300'
+        onClick={handleMenuToggle}
+      />
+    )}
+
+      <div 
+        className={`fixed top-0 right-0 w-4/5 max-w-sm bg-white dark:bg-black h-full z-50 shadow-lg transform transition-transform duration-300 ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}
+        >
+          <div className='flex flex-col space-y-2 p-4'>
         <Link href="/about" className="block py-2 px-4 text-sm hover:bg-green-500 hover:text-white transition duration-300">About Me</Link>
         <Link href="/projects" className="block py-2 px-4 text-sm hover:bg-green-500 hover:text-white transition duration-300">Projects</Link>
         <Link href="/contact" className="block py-2 px-4 text-sm hover:bg-green-500 hover:text-white transition duration-300">Contact Me</Link>
+        </div>
       </div>
-    </nav>
+    </>
   );
 };
