@@ -1,5 +1,6 @@
 import AboutMe  from "./components/about-me";
 import  HomePage  from "./components/home";
+import Projects from "./components/projects";
 
 
 
@@ -8,6 +9,7 @@ export default function Home() {
     <main>
       <HomePage />
       <AboutMe />
+      <Projects />
     </main>
   );
 }
