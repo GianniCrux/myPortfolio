@@ -24,13 +24,15 @@ interface ProjectProps {
         />
         </a>
         <div className="absolute inset-0 bg-black bg-opacity-75 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-          <Image 
-            src={previewImage} 
-            alt={`${title} preview`} 
-            width={600} 
-            height={400}
-            className="w-full h-auto" 
-        />
+          <a href={link} target="_blank" rel="noopener noreferrer" className="block p-4">
+            <Image 
+              src={previewImage} 
+              alt={`${title} preview`} 
+              width={600} 
+              height={400}
+              className="w-full h-auto" 
+            />
+          </a>
         </div>
       </div>
     );
