@@ -11,13 +11,15 @@ export const Navbar = () => {
 
   return (
     <>
-    <nav className="bg-white shadow-lg dark:bg-zinc-950 sticky">
+    <nav
+        className={`bg-white shadow-lg dark:bg-zinc-950 fixed top-0 left-0 w-full z-50 transition duration-300`}
+      >
       <div className="max-w-6xl mx-auto px-4">
         <div className="flex justify-between">
           <div className="flex space-x-7">
             <div>
               <Link href="/" className="flex items-center py-4 px-2">
-                <span className="font-semibold text-gray-500 text-lg hover:text-green-500 dark:text-white">&lt;Gianni /&gt;</span>
+                <span className="font-semibold text-gray-500 text-lg hover:text-green-500 dark:hover:text-green-500 dark:text-white">&lt;Gianni /&gt;</span>
               </Link>
             </div>
           </div>
@@ -52,7 +54,7 @@ export const Navbar = () => {
 
     {isOpen && (
       <div
-        className='fixed inset-0 bg-slate-950 bg-opacity-50 z-40 transition-opacity duration-300'
+        className='fixed  inset-0 bg-slate-950 bg-opacity-50 z-40 transition-opacity duration-300'
         onClick={handleMenuToggle}
       />
     )}
