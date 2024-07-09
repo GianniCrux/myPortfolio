@@ -16,6 +16,16 @@
   }
 }
 
+/* .sunBackground {
+  background-image: url('/sunbg.svg');
+  background-size: contain;
+}
+
+.moonBackground {
+  background-image: url('/moonbg.jpg');
+  background-size: contain;
+}
+ */
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(

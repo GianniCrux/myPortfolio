@@ -11,7 +11,7 @@ export const Navbar = () => {
 
   return (
     <>
-    <nav className="bg-white shadow-lg dark:bg-slate-950 sticky">
+    <nav className="bg-white shadow-lg dark:bg-zinc-950 sticky">
       <div className="max-w-6xl mx-auto px-4">
         <div className="flex justify-between">
           <div className="flex space-x-7">
