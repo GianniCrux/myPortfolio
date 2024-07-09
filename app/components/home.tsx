@@ -23,7 +23,7 @@ export default function HomePage() {
 
 
   return (
-    <div className="min-h-screen relative bg-white dark:bg-black pt-10">
+    <div id='home' className="min-h-screen relative bg-white dark:bg-black pt-10">
       {/* <AnimatedSVG /> */}
       <RandomLines />
 
