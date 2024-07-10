@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "./components/navbar";
 import { ThemeProvider } from 'next-themes'
+import AOSInit from "./_components/AOSInit";
 
 
 export const metadata: Metadata = {
@@ -18,7 +19,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-      <ThemeProvider attribute="class">        
+      <ThemeProvider attribute="class">   
+        <AOSInit />     
         <main>
           <Navbar />
           {children}
