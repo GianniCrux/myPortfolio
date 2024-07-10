@@ -1,18 +1,25 @@
-export default function AboutMe() { //TODO: Change the layout of headings and add images
+export default function AboutMe() {
     return (
-        <section id="about" className="py-16 bg-white text-black dark:bg-black dark:text-white min-h-screen flex items-center">
-            <div className="container mx-auto px-4 flex">
-                <div className="w-1/2 flex flex-col justify-center">
-                    <h2 className="text-3xl font-bold mb-4 text-right">ABOUT</h2>
-                    <p>
-                    Here you can write a paragraph about yourself. For example: I&aposm a passionate web developer with a keen interest in creating user-friendly and visually appealing websites. With expertise in React, Next.js, and modern web technologies, I strive to build efficient and scalable applications that make a positive impact.
-                    </p>
+        <section id="about" className="py-16 bg-white text-black dark:bg-black dark:text-white min-h-screen flex items-center content-center">
+            <div className="container mx-auto px-4 relative">
+
+                <div className="absolute top-0 left-1/2 bottom-0 w-[2px] bg-green-500 -translate-x-1/2"></div>
+                
+                <div>
+                    <h2 className="text-3xl font-bold absolute left-[calc(50%-108px)] top-0 bg-white dark:bg-black">ABOUT</h2>
+                    <h2 className="text-3xl font-bold absolute right-[calc(50%-43px)] top-4 bg-white dark:bg-black tracking-tighter">ME</h2>
                 </div>
-                <div className="w-[2px] bg-green-500 mx-1"></div>
-                <div className="w-1/2 flex flex-col justify-center">
-                    <h2 className="text-3xl font-bold mb-4 text-left">ME</h2>
-                    <div className="bg-gray-300 h-64 w-full">
-                        <p className="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, tenetur. Assumenda expedita sed unde rem, porro est inventore praesentium eius.</p>
+                
+                <div className="flex justify-center pt-16">
+                    <div className="xl:w-1/4 sm:w-1/2 pr-4">
+                        <p>
+                        I&apos;m a passionate web developer with a keen interest in creating user-friendly and visually appealing websites. With expertise in React, Next.js, and modern web technologies, I strive to build efficient and scalable applications that make a positive impact.
+                        </p>
+                    </div>
+                    <div className="xl:w-1/4 sm:w-1/2 pl-4">
+                        <p>
+                        Besides developing i love playing videogames, film, adventures and challenges, i love to go trekking, i love animals and i always try to create a good and comfortable environment so every people can feel good and at home! 
+                        </p>
                     </div>
                 </div>
             </div>
