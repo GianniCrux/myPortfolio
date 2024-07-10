@@ -6,15 +6,20 @@ import RandomLines from './random-lines'
 
 
 const skills = [
-  { name: 'Skill 1', image: '/next.svg' },
-  { name: 'Skill 2', image: '/next.svg' },
-  { name: 'Skill 3', image: '/next.svg' },
-  { name: 'Skill 4', image: '/next.svg' },
-  { name: 'Skill 5', image: '/next.svg' },
-  { name: 'Skill 6', image: '/next.svg' },
-  { name: 'Skill 7', image: '/next.svg' },
-  { name: 'Skill 8', image: '/next.svg' },
-  { name: 'Skill 9', image: '/next.svg' },
+  { name: 'HTML', image: '/next.svg' },
+  { name: 'CSS', image: '/next.svg' },
+  { name: 'JavaScript', image: '/next.svg' },
+  { name: 'GitHub', image: '/next.svg' },
+  { name: 'Tailwind', image: '/next.svg' },
+  { name: 'React', image: '/next.svg' },
+  { name: 'Python', image: '/next.svg' },
+  { name: 'Next.js', image: '/next.svg' },
+  { name: 'Convex', image: '/next.svg' },
+  { name: 'Clerk', image: '/next.svg' },
+  { name: 'Prisma', image: '/next.svg' },
+  { name: 'Typescript', image: '/next.svg' },
+  { name: 'Node.js', image: '/next.svg' },
+  { name: 'Redux', image: '/next.svg' },
 ]
 
 export default function HomePage() {
