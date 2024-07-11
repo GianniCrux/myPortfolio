@@ -1,18 +1,37 @@
 "use client";
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { ThemeToggle } from './theme-toggle';
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
+
+  useEffect(() => {
+    let lastScrollY = window.scrollY;
+    const handleScroll = () => {
+      if (window.scrollY > lastScrollY) {
+        setIsVisible(false);
+      } else {
+        setIsVisible(true);
+      };
+        lastScrollY = window.scrollY;
+    }
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   const handleMenuToggle = () => setIsOpen(!isOpen);
 
   return (
     <>
     <nav
-        className={`bg-white shadow-lg dark:bg-black fixed top-0 left-0 w-full z-50 transition duration-300`}
+        className={`bg-white shadow-lg dark:bg-black fixed top-0 left-0 w-full z-50 transition duration-300 ${isVisible ? 'translate-y-0' : '-translate-y-full'}`}
       >
       <div className="max-w-6xl mx-auto px-4">
         <div className="flex justify-between">
