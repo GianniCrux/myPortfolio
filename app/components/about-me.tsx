@@ -16,7 +16,7 @@ export default function AboutMe() {
                         I&apos;m a passionate web developer with a keen interest in creating user-friendly and visually appealing websites. With expertise in React, Next.js, and modern web technologies, I strive to build efficient and scalable applications that make a positive impact.
                         </p>
                     </div>
-                    <div className="xl:w-1/4 sm:w-1/2 pl-4" data-aos="fade-left">
+                    <div className="xl:w-1/4 sm:w-1/2 pl-4 pt-4" data-aos="fade-left">
                         <p>
                         Besides developing i love playing videogames, film, adventures and challenges, i love to go trekking, i love animals and i always try to create a good and comfortable environment so every people can feel good and at home! 
                         </p>

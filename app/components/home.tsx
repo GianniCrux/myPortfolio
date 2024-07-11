@@ -34,16 +34,16 @@ export default function HomePage() {
 
       <div className="container mx-auto px-4 py-8 relative z-10">
         <div className="flex flex-col md:flex-row md:justify-between mb-8">
-          {/* User Profile */}
+{/*           
           <div className="md:w-1/3 mb-8 md:mb-0" data-aos="fade-up">
             <div className="w-48 h-48 rounded-full overflow-hidden mx-auto mb-4 bg-gray-200">
               <Image src="/proPic.png" alt="Profile" width={192} height={192} />
             </div>
-          </div>
+          </div> */}
 
           {/* Description */}
           <div data-aos="fade-down" className="md:w-2/3 md:pl-8">
-            <div className="bg-white dark:bg-zinc-950 text-black dark:text-white bg-opacity-80 dark:bg-opacity-80 p-6 rounded-lg shadow-lg">
+            <div className="bg-white dark:bg-black text-black dark:text-white bg-opacity-80 dark:bg-opacity-80 p-6 rounded-lg shadow-lg">
               <p className="text-lg">
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio, accusamus! Explicabo, veritatis! Ratione, rem! Blanditiis optio et odit esse provident.
               </p>
@@ -52,7 +52,7 @@ export default function HomePage() {
         </div>
 
         {/* Skills Container */}
-        <div data-aos="zoom-in" className="w-full max-w-6xl mx-auto p-6 rounded-lg bg-white dark:bg-slate-950 bg-opacity-80 dark:bg-opacity-80 shadow-lg">
+        <div data-aos="zoom-in" className="w-full max-w-6xl mx-auto p-6 rounded-lg bg-white dark:bg-black bg-opacity-80 dark:bg-opacity-80 shadow-lg">
           <h2 className="text-xl text-black font-semibold mb-4 text-center dark:text-white">Skills</h2>
           <div className="flex flex-wrap justify-center">
             {skills.map((skill, index) => (

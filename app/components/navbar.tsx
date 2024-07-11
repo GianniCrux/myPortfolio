@@ -12,7 +12,7 @@ export const Navbar = () => {
   return (
     <>
     <nav
-        className={`bg-white shadow-lg dark:bg-zinc-950 fixed top-0 left-0 w-full z-50 transition duration-300`}
+        className={`bg-white shadow-lg dark:bg-black fixed top-0 left-0 w-full z-50 transition duration-300`}
       >
       <div className="max-w-6xl mx-auto px-4">
         <div className="flex justify-between">
