@@ -53,7 +53,7 @@ export default function HomePage() {
 
         {/* Skills Container */}
         <div data-aos="zoom-in" className="w-full max-w-6xl mx-auto p-6 rounded-lg bg-white dark:bg-black bg-opacity-80 dark:bg-opacity-80 shadow-lg">
-          <h2 className="text-xl text-black font-semibold mb-4 text-center dark:text-white">Skills</h2>
+          <h2 className="text-xl text-green-600 font-semibold mb-4 text-center dark:text-green-500">Skills</h2>
           <div className="flex flex-wrap justify-center">
             {skills.map((skill, index) => (
               <div key={index} className="flex flex-col items-center m-4">
