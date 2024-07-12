@@ -5,7 +5,7 @@ const projects = [
   {
     title: 'Sticks',
     description: 'Miro clone: offer the possibility to create plans and workflows and collaborate real time with other users within the same organization',
-    imageUrl: '/sticks-logo.png',
+    imageUrl: '/logo-sticks.svg',
     link: 'https://sticks-gamma.vercel.app/',
     previewImage: '/sticks-screen.png'
   },
