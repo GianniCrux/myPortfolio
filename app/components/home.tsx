@@ -43,7 +43,7 @@ export default function HomePage() {
 
           {/* Description */}
           <div data-aos="fade-down" className="md:w-2/3 md:pl-8">
-            <div className="bg-white dark:bg-black text-black dark:text-white bg-opacity-80 dark:bg-opacity-80 p-6 rounded-lg shadow-lg">
+            <div className="bg-white dark:bg-black text-black dark:text-white bg-opacity-80 dark:bg-opacity-80 p-6 rounded-lg shadow-lg border-2 border-green-500">
               <p className="text-lg">
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio, accusamus! Explicabo, veritatis! Ratione, rem! Blanditiis optio et odit esse provident.
               </p>
@@ -52,7 +52,7 @@ export default function HomePage() {
         </div>
 
         {/* Skills Container */}
-        <div data-aos="zoom-in" className="w-full max-w-6xl mx-auto p-6 rounded-lg bg-white dark:bg-black bg-opacity-80 dark:bg-opacity-80 shadow-lg">
+        <div data-aos="zoom-in" className="w-full max-w-6xl mx-auto p-6 rounded-lg bg-white dark:bg-black bg-opacity-80 dark:bg-opacity-80 shadow-lg border-2 border-green-500">
           <h2 className="text-xl text-green-600 font-semibold mb-4 text-center dark:text-green-500">Skills</h2>
           <div className="flex flex-wrap justify-center">
             {skills.map((skill, index) => (
