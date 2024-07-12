@@ -30,7 +30,7 @@ export default function Projects() {
     <section id="projects" className="min-h-screen bg-white text-black dark:bg-black dark:text-white py-16">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-center mb-8 text-green-500">Projects</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 justify-items-center">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 justify-items-center">
           {projects.map((project, index) => (
             <Project
               key={index}
