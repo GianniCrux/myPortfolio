@@ -1,7 +1,8 @@
 'use client'
 
 import Image from 'next/image'
-import RandomLines from './random-lines'
+import  RandomLines  from '../_components/lines'
+
 
 
 
