@@ -34,7 +34,7 @@ export const Navbar = () => {
         className={`bg-white shadow-lg dark:bg-black fixed top-0 left-0 w-full z-50 transition duration-300 ${isVisible ? 'translate-y-0' : '-translate-y-full'}`}
       >
       <div className="max-w-6xl mx-auto px-4">
-        <div className="flex justify-between">
+        <div className="flex justify-between items-center">
           <div className="flex space-x-7">
             <div>
               <Link href="/" className="flex items-center py-4 px-2">
@@ -46,7 +46,9 @@ export const Navbar = () => {
             <Link href="#about" className="py-4 px-2 text-green-500 font-semibold hover:text-green-800 transition duration-300">About Me</Link>
             <Link href="#projects" className="py-4 px-2 text-green-500 font-semibold hover:text-green-800 transition duration-300">Projects</Link>
             <Link href="#contact" className="py-4 px-2 text-green-500 font-semibold hover:text-green-800 transition duration-300">Contact Me</Link>
-            <ThemeToggle />
+{/*             <div className="ml-4">
+              <ThemeToggle />
+            </div> */}
           </div>
           <div className="md:hidden flex items-center">
             <button className="outline-none mobile-menu-button focus:outline-none" onClick={handleMenuToggle}>
@@ -73,7 +75,7 @@ export const Navbar = () => {
 
     {isOpen && (
       <div
-        className='fixed  inset-0 bg-slate-950 bg-opacity-50 z-40 transition-opacity duration-300'
+        className='fixed inset-0 bg-slate-950 bg-opacity-50 z-40 transition-opacity duration-300'
         onClick={handleMenuToggle}
       />
     )}
@@ -81,12 +83,20 @@ export const Navbar = () => {
       <div 
         className={`fixed top-0 right-0 w-4/5 max-w-sm bg-white dark:bg-black h-full z-50 shadow-lg transform transition-transform duration-300 ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}
         >
-          <div className='flex flex-col space-y-2 p-4 h-full'>
-        <Link href="#about" className="block py-2 px-4 text-sm  hover:text-green-800 hover:bg-green-100 dark:hover:bg-green-900 text-green-500 dark:text-green-300 transition duration-300 ease-in-out transform hover:scale-105">About Me</Link>
-        <Link href="#projects" className="block py-2 px-4 text-sm  hover:text-green-800 hover:bg-green-100 dark:hover:bg-green-900 text-green-500 dark:text-green-300 transition duration-300 ease-in-out transform hover:scale-105">Projects</Link>
-        <Link href="#contact" className="block py-2 px-4 text-sm  hover:text-green-800 hover:bg-green-100 dark:hover:bg-green-900 text-green-500 dark:text-green-300 transition duration-300 ease-in-out transform hover:scale-105">Contact Me</Link>
+          <div className='flex flex-col justify-between h-full p-4'>
+            <div className='space-y-2'>
+              <Link href="#about" className="block py-2 px-4 text-sm hover:text-green-800 hover:bg-green-100 dark:hover:bg-green-900 text-green-500 dark:text-green-300 transition duration-300 ease-in-out transform hover:scale-105">About Me</Link>
+              <Link href="#projects" className="block py-2 px-4 text-sm hover:text-green-800 hover:bg-green-100 dark:hover:bg-green-900 text-green-500 dark:text-green-300 transition duration-300 ease-in-out transform hover:scale-105">Projects</Link>
+              <Link href="#contact" className="block py-2 px-4 text-sm hover:text-green-800 hover:bg-green-100 dark:hover:bg-green-900 text-green-500 dark:text-green-300 transition duration-300 ease-in-out transform hover:scale-105">Contact Me</Link>
+            </div>
+{/*             <div className="mt-auto">
+              <ThemeToggle />
+            </div> */}
+          </div>
+      </div>
+
+      <div className="fixed bottom-4 right-4 z-50">
         <ThemeToggle />
-        </div>
       </div>
     </>
   );
