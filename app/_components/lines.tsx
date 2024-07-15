@@ -4,7 +4,7 @@ import React from 'react'
 
 function SketchyLines() {
   const lines = [
-    // Left side
+/*     // Left side
     "M10,30 C5,40 15,50 10,60 S5,80 10,90",
     
     // Right side
@@ -20,7 +20,12 @@ function SketchyLines() {
     "M5,95 Q10,90 15,95",
     
     // Bottom right corner
-    "M85,95 Q90,90 95,95"
+    "M85,95 Q90,90 95,95" */
+    // Bottom left corner, diagonal pointing up-right
+    "M10,90 L20,80",
+    
+    // Top right corner, diagonal pointing down-left
+    "M80,10 L90,20"
   ]
 
   return (
