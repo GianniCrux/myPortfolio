@@ -30,7 +30,6 @@ export default function HomePage() {
 
   return (
     <div id='home' className="min-h-screen relative bg-white dark:bg-black pt-10">
-      {/* <AnimatedSVG /> */}
       <RandomLines />
 
       <div className="container mx-auto px-4 py-8 relative z-10">
@@ -43,9 +42,9 @@ export default function HomePage() {
           </div> */}
 
           {/* Description */}
-          <div data-aos="fade-down" className="md:w-2/3 md:pl-8">
+          <div data-aos="fade-down" className="md:w-1/2 lg:w-2/4 ">
             <div className="bg-white dark:bg-black text-black dark:text-white bg-opacity-80 dark:bg-opacity-80 p-6 rounded-lg  border-2 border-green-500">
-              <p className="text-lg">
+              <p className="text-lg leading-relaxed">
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio, accusamus! Explicabo, veritatis! Ratione, rem! Blanditiis optio et odit esse provident.
               </p>
             </div>
@@ -53,15 +52,15 @@ export default function HomePage() {
         </div>
 
         {/* Skills Container */}
-        <div data-aos="zoom-in" className="w-full max-w-6xl mx-auto p-6 rounded-lg bg-white dark:bg-black bg-opacity-80 dark:bg-opacity-80  border-2 border-green-500">
-          <h2 className="text-xl text-green-600 font-semibold mb-4 text-center dark:text-green-500">Skills</h2>
-          <div className="flex flex-wrap justify-center">
+        <div data-aos="zoom-in" className="w-full max-w-4xl mx-auto p-6 rounded-lg bg-white dark:bg-black bg-opacity-90 dark:bg-opacity-90  border-2 border-green-500">
+          <h2 className="text-2xl text-green-600 font-semibold mb-6 text-center dark:text-green-400">Skills</h2>
+          <div className="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-6 lg:grid-cols-7 gap-6">
             {skills.map((skill, index) => (
-              <div key={index} className="flex flex-col items-center m-4">
-                <div className="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center">
+              <div key={index} className="flex flex-col items-center group">
+                <div className="w-16 h-16 bg-gray-200 dark:bg-gray-700 rounded-full flex items-center justify-center transition-transform group-hover:scale-110">
                   <Image src={skill.image} alt={skill.name} width={40} height={40} />
                 </div>
-                <span className="mt-2 text-sm text-black dark:text-white">{skill.name}</span>
+                <span className="mt-2 text-sm text-black dark:text-white group-hover:text-green-500 transition-colors">{skill.name}</span>
               </div>
             ))}
           </div>
