@@ -25,7 +25,7 @@ const ContactMe: React.FC = () => {
   };
 
   return (
-    <div className="w-screen mx-auto p-6 bg-white dark:bg-black text-black dark:text-white rounded-lg shadow-lg">
+    <div id="contact" className="w-screen mx-auto p-6 bg-white dark:bg-black text-black dark:text-white rounded-lg shadow-lg">
       <h2 className="text-3xl font-bold mb-6">Contact Me</h2>
 
       <div className=" gap-8">
