@@ -24,7 +24,7 @@ const ContactMe: React.FC = () => {
   };
 
   return (
-    <div id="contact" className="w-screen mx-auto p-6 bg-white dark:bg-black text-black dark:text-white rounded-lg shadow-lg">
+    <div id="contact" className="w-screen mx-auto p-6 bg-white dark:bg-black text-black dark:text-white shadow-lg">
       <h2 data-aos="fade-up" className="text-3xl font-bold mb-6">Contact Me</h2>
 
       <div className=" gap-8">
@@ -37,14 +37,11 @@ const ContactMe: React.FC = () => {
           />
         </div>
 
-        <div>
+        <div className='pt-3'>
         <div className='flex flex-col md:flex-row items-start justify-between gap-6'>
         <h1 data-aos="fade-down-right" className='text-2xl font-bold md:w-1/2'>Do you prefer reaching me by mail or check my socials?</h1>
-        <p data-aos="fade-up" className='text- text-gray-600 dark:text-gray-400'>
-            My mail: gianni.disti@gmail.com
-        </p>
-        <div className='w-full md:w-1/2 flex flex-wrap gap-4 justify-end'>
-          <Link data-aos="fade-up" href='mailto:gianni.disti@gmail.com' 
+        <div className='w-full md:w-1/2 flex flex-wrap gap-4 justify-end mr-6'>
+          <Link data-aos="fade-up" href='https://mail.google.com/mail/?view=cm&fs=1&to=gianni.disti@gmail.com' target='_blank' 
                 className='flex items-center gap-2 px-4 py-2 bg-red-600 text-white rounded-full hover:bg-red-700 transition-colors'>
             <MailIcon size={20} />
             <span>Email</span>
