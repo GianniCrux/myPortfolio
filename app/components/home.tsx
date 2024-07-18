@@ -1,26 +1,33 @@
 'use client'
 
-import Image from 'next/image'
-import  RandomLines  from '../_components/lines'
 
+import { FaHtml5, FaCss3Alt, FaJs, FaGithub, FaCloud, FaReact, FaPython, FaNodeJs } from 'react-icons/fa'
+import { SiTailwindcss, SiNextdotjs, SiClerk, SiPrisma, SiTypescript, SiRedux } from 'react-icons/si'
+import RandomLines from '../_components/lines'
+import { IconType } from 'react-icons';
+import React from 'react'
 
+type Skill = {
+  name: string;
+  icon: IconType;
+  color: string;
+};
 
-
-const skills = [
-  { name: 'HTML', image: '/next.svg' },
-  { name: 'CSS', image: '/next.svg' },
-  { name: 'JavaScript', image: '/next.svg' },
-  { name: 'GitHub', image: '/next.svg' },
-  { name: 'Tailwind', image: '/next.svg' },
-  { name: 'React', image: '/next.svg' },
-  { name: 'Python', image: '/next.svg' },
-  { name: 'Next.js', image: '/next.svg' },
-  { name: 'Convex', image: '/next.svg' },
-  { name: 'Clerk', image: '/next.svg' },
-  { name: 'Prisma', image: '/next.svg' },
-  { name: 'Typescript', image: '/next.svg' },
-  { name: 'Node.js', image: '/next.svg' },
-  { name: 'Redux', image: '/next.svg' },
+const skills: Skill[] = [
+  { name: 'HTML', icon: FaHtml5, color: '#E34F26' },
+  { name: 'CSS', icon: FaCss3Alt, color: '#1572B6' },
+  { name: 'JavaScript', icon: FaJs, color: '#F7DF1E' },
+  { name: 'GitHub', icon: FaGithub, color: '#181717' },
+  { name: 'Tailwind', icon: SiTailwindcss, color: '#06B6D4' },
+  { name: 'React', icon: FaReact, color: '#61DAFB' },
+  { name: 'Python', icon: FaPython, color: '#3776AB' },
+  { name: 'Next.js', icon: SiNextdotjs, color: '#000000' },
+  { name: 'Convex', icon: FaCloud, color: '#FF5C02' },
+  { name: 'Clerk', icon: SiClerk, color: '#6C47FF' },
+  { name: 'Prisma', icon: SiPrisma, color: '#2D3748' },
+  { name: 'TypeScript', icon: SiTypescript, color: '#3178C6' },
+  { name: 'Node.js', icon: FaNodeJs, color: '#339933' },
+  { name: 'Redux', icon: SiRedux, color: '#764ABC' },
 ]
 
 export default function HomePage() {
@@ -58,7 +65,7 @@ export default function HomePage() {
             {skills.map((skill, index) => (
               <div key={index} className="flex flex-col items-center group">
                 <div className="w-16 h-16 bg-gray-200 dark:bg-gray-700 rounded-full flex items-center justify-center transition-transform group-hover:scale-110">
-                  <Image src={skill.image} alt={skill.name} width={40} height={40} />
+                {React.createElement(skill.icon, { size: 40, color: skill.color })}
                 </div>
                 <span className="mt-2 text-sm text-black dark:text-white group-hover:text-green-500 transition-colors">{skill.name}</span>
               </div>
