@@ -1,10 +1,8 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "./components/navbar";
-import { ThemeProvider } from 'next-themes'
-import AOSInit from "./_components/AOSInit";
 import RoadmapScrollbar from "./components/roadmapScrollbar";
+import { Providers } from "./_components/providers";
 
 
 export const metadata: Metadata = {
@@ -25,16 +23,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body>
-      <ThemeProvider attribute="class">   
-        <AOSInit />     
+    <html lang="en" suppressHydrationWarning>
+      <body suppressHydrationWarning>  
+      <Providers>     
         <main>
           <Navbar />
           <RoadmapScrollbar sections={sections} />
           {children}
         </main>
-      </ThemeProvider>
+        </Providers>
       </body>
     </html>
   );
