@@ -5,7 +5,9 @@ import { FaHtml5, FaCss3Alt, FaJs, FaGithub, FaCloud, FaReact, FaPython, FaNodeJ
 import { SiTailwindcss, SiNextdotjs, SiClerk, SiPrisma, SiTypescript, SiRedux } from 'react-icons/si'
 import RandomLines from '../_components/lines'
 import { IconType } from 'react-icons';
-import React from 'react'
+import React, { useEffect } from 'react'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 type Skill = {
   name: string;
@@ -32,7 +34,9 @@ const skills: Skill[] = [
 
 export default function HomePage() {
 
-
+  useEffect(() => {
+    AOS.refresh(); // Ensure AOS refreshes to detect new elements
+  }, []);
 
 
   return (
@@ -41,14 +45,7 @@ export default function HomePage() {
 
       <div className="container mx-auto px-4 py-8 relative z-10">
         <div className="flex flex-col md:flex-row md:justify-between mb-8">
-{/*           
-          <div className="md:w-1/3 mb-8 md:mb-0" data-aos="fade-up">
-            <div className="w-48 h-48 rounded-full overflow-hidden mx-auto mb-4 bg-gray-200">
-              <Image src="/proPic.png" alt="Profile" width={192} height={192} />
-            </div>
-          </div> */}
 
-          {/* Description */}
           <div data-aos="fade-down" className="md:w-1/2 lg:w-2/4 ">
             <div className="bg-white dark:bg-black text-black dark:text-white bg-opacity-80 dark:bg-opacity-80 p-6 rounded-lg  border-2 border-green-500">
               <p className="text-lg leading-relaxed">
@@ -58,14 +55,14 @@ export default function HomePage() {
           </div>
         </div>
 
-        {/* Skills Container */}
+      
         <div data-aos="zoom-in" className="w-full max-w-4xl mx-auto p-6 rounded-lg bg-white dark:bg-black bg-opacity-90 dark:bg-opacity-90  border-2 border-green-500">
           <h2 className="text-2xl text-green-600 font-semibold mb-6 text-center dark:text-green-400">Skills</h2>
           <div className="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-6 lg:grid-cols-7 gap-6">
             {skills.map((skill, index) => (
               <div key={index} className="flex flex-col items-center group">
-                <div className="w-16 h-16 bg-gray-200 dark:bg-gray-700 rounded-full flex items-center justify-center transition-transform group-hover:scale-110">
-                {React.createElement(skill.icon, { size: 40, color: skill.color })}
+                <div className="w-14 h-14 bg-gray-200 dark:bg-gray-700 rounded-full flex items-center justify-center transition-transform group-hover:scale-110">
+                {React.createElement(skill.icon, { size: 30, color: skill.color })}
                 </div>
                 <span className="mt-2 text-sm text-black dark:text-white group-hover:text-green-500 transition-colors">{skill.name}</span>
               </div>

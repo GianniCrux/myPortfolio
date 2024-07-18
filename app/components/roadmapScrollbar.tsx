@@ -10,6 +10,14 @@ interface Section {
 const RoadmapScrollbar: React.FC<{ sections: Section[] }> = ({ sections }) => {
   const [activeSection, setActiveSection] = useState(0);
 
+
+  const scrollToSection = (index: number) => {
+    const element = document.getElementById(sections[index].id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth'})
+    }
+  }
+
   useEffect(() => { 
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
@@ -37,12 +45,9 @@ const RoadmapScrollbar: React.FC<{ sections: Section[] }> = ({ sections }) => {
         <div
           key={section.id}
           className={`w-4 h-4 rounded-full cursor-pointer ${
-            index <= activeSection ? 'bg-green-500' : 'bg-gray-300'
+            index === activeSection ? 'bg-green-500' : 'bg-gray-300'
           }`}
-          onClick={() => {
-            const element = document.getElementById(section.id);
-            element?.scrollIntoView({ behavior: 'smooth' });
-          }}
+          onClick={() => scrollToSection(index)}
           title={section.title}
         />
       ))}
