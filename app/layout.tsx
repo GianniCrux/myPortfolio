@@ -25,7 +25,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body suppressHydrationWarning >  
+      <body suppressHydrationWarning className="bg-white dark:bg-black">  
       <ThemeProvider attribute="class">   
         <main>
           <Navbar />

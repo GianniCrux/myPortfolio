@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from 'react';
-import { InlineWidget } from 'react-calendly';
 import { User, Mail, MessageSquare, MailIcon, Linkedin } from 'lucide-react';
 import Link from 'next/link';
 import { Calendly } from '../_components/calendly';
@@ -111,9 +110,9 @@ const ContactMe: React.FC = () => {
               Send Message
             </button>
           </form>
+          <Calendly />
         </div>
       </div>
-      <Calendly />
     </div>
   );
 };

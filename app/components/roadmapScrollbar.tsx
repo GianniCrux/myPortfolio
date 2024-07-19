@@ -43,7 +43,8 @@ const RoadmapScrollbar: React.FC<{ sections: Section[] }> = ({ sections }) => {
   }, [sections]);
 
   return ( //TODO: Modify the style 
-    <div id="roadmap-scrollbar" className="fixed index-50 left-4 top-1/2 transform -translate-y-1/2 flex flex-col space-y-2">
+    <div id="roadmap-scrollbar" className="w-1 fixed ml-1 md:top-1/2 md:right-5 md:-translate-y-1/2 md:flex md:flex-col 
+                    sm:top-0 sm:left-0 sm:right-0 sm:flex sm:flex-row sm:justify-center sm:bg-white sm:dark:bg-black ">
       {sections.map((section, index) => (
         <div
           key={section.id}
