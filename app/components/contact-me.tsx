@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { InlineWidget } from 'react-calendly';
 import { User, Mail, MessageSquare, MailIcon, Linkedin } from 'lucide-react';
 import Link from 'next/link';
+import { Calendly } from '../_components/calendly';
 
 const ContactMe: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -24,15 +25,15 @@ const ContactMe: React.FC = () => {
   };
 
   return (
-    <div id="contact" className="w-screen mx-auto p-6 bg-white dark:bg-black text-black dark:text-white shadow-lg">
+    <div id="contact" className="ml-5 w-screen mx-auto p-6 bg-white dark:bg-black text-black dark:text-white shadow-lg">
       <h2 data-aos="fade-up" className="text-3xl font-bold mb-6">Contact Me</h2>
 
       <div className=" gap-8">
 
         <div className='pt-3'>
-        <div className='flex flex-col md:flex-row items-start justify-between gap-6'>
+        <div className='flex flex-col md:flex-row items-start justify-between gap-6 w-11/12'>
         <h1 data-aos="fade-down-right" className='text-2xl font-bold md:w-1/2'>Do you want to reach me by mail or check my socials?</h1>
-        <div className='w-full md:w-1/2 flex flex-wrap gap-4 justify-end mr-6'>
+        <div className='w-full md:w-1/2 flex flex-wrap gap-4 justify-end'>
           <Link data-aos="fade-up" href='https://mail.google.com/mail/?view=cm&fs=1&to=gianni.disti@gmail.com' target='_blank' 
                 className='flex items-center gap-2 px-4 py-2 bg-red-600 text-white rounded-full hover:bg-red-700 transition-colors'>
             <MailIcon size={20} />
@@ -66,7 +67,7 @@ const ContactMe: React.FC = () => {
                 name="name"
                 value={formData.name}
                 onChange={handleInputChange}
-                className="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-800"
+                className="w-11/12 px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-800"
                 required
               />
             </div>
@@ -82,7 +83,7 @@ const ContactMe: React.FC = () => {
                 name="email"
                 value={formData.email}
                 onChange={handleInputChange}
-                className="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-800"
+                className="w-11/12 px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-800"
                 required
               />
             </div>
@@ -97,7 +98,7 @@ const ContactMe: React.FC = () => {
                 name="message"
                 value={formData.message}
                 onChange={handleInputChange}
-                className="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-800"
+                className="w-11/12 px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-800"
                 rows={4}
                 required
               ></textarea>
@@ -112,6 +113,7 @@ const ContactMe: React.FC = () => {
           </form>
         </div>
       </div>
+      <Calendly />
     </div>
   );
 };
