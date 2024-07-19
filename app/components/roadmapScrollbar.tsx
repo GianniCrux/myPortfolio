@@ -27,8 +27,10 @@ const RoadmapScrollbar: React.FC<{ sections: Section[] }> = ({ sections }) => {
         const element = document.getElementById(section.id);
         if (element) {
           const { offsetTop, offsetHeight } = element;
-          if (scrollPosition >= offsetTop - windowHeight / 2 &&
-              scrollPosition < offsetTop + offsetHeight - windowHeight / 2) {
+          if (
+            scrollPosition >= offsetTop - windowHeight / 2 &&
+              scrollPosition < offsetTop + offsetHeight - windowHeight / 2
+            ) {
             setActiveSection(index);
           }
         }
@@ -36,11 +38,12 @@ const RoadmapScrollbar: React.FC<{ sections: Section[] }> = ({ sections }) => {
     };
 
     window.addEventListener('scroll', handleScroll);
+    handleScroll();
     return () => window.removeEventListener('scroll', handleScroll);
   }, [sections]);
 
   return ( //TODO: Modify the style 
-    <div className="fixed right-4 top-1/2 transform -translate-y-1/2 flex flex-col space-y-2">
+    <div id="roadmap-scrollbar" className="fixed right-4 top-1/2 transform -translate-y-1/2 flex flex-col space-y-2">
       {sections.map((section, index) => (
         <div
           key={section.id}

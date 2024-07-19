@@ -34,9 +34,6 @@ const skills: Skill[] = [
 
 export default function HomePage() {
 
-  useEffect(() => {
-    AOS.refresh(); // Ensure AOS refreshes to detect new elements
-  }, []);
 
 
   return (

@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Navbar } from "./components/navbar";
 import RoadmapScrollbar from "./components/roadmapScrollbar";
-import { Providers } from "./_components/providers";
+import AOSInit from "./_components/AOSInit";
+import { ThemeProvider } from "next-themes";
 
 
 export const metadata: Metadata = {
@@ -24,14 +25,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body suppressHydrationWarning>  
-      <Providers>     
+      <body suppressHydrationWarning >  
+      <ThemeProvider attribute="class">   
         <main>
           <Navbar />
           <RoadmapScrollbar sections={sections} />
           {children}
         </main>
-        </Providers>
+      </ThemeProvider>
       </body>
     </html>
   );
