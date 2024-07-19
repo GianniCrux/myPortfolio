@@ -8,7 +8,7 @@ import Projects from "./components/projects";
 
 export default function Home() {
   return (
-    <main>
+    <main className="overflow-x-hidden">
       <AOSInit />
       <HomePage />
       <AboutMe />

@@ -30,7 +30,7 @@ function SketchyLines() {
 
   return (
     <div data-aos="fade-down" className="absolute inset-0 z-0 pointer-events-none">
-      <svg className="w-screen h-screen" viewBox="0 0 100 100" preserveAspectRatio="none">
+      <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
         {lines.map((d, index) => (
           <path
             key={index}
