@@ -24,7 +24,7 @@ const ContactMe: React.FC = () => {
   };
 
   return (
-    <div id="contact" className="w-screen mx-auto p-6 bg-white dark:bg-black text-black dark:text-white shadow-lg">
+    <div id="contact" className="w-full mx-auto p-6 bg-white dark:bg-black text-black dark:text-white shadow-lg">
       <h2 data-aos="fade-up" className="text-3xl font-bold mb-6">Contact Me</h2>
 
       <div className=" gap-8">
@@ -66,7 +66,7 @@ const ContactMe: React.FC = () => {
                 name="name"
                 value={formData.name}
                 onChange={handleInputChange}
-                className="w-11/12 px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-800"
+                className="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-800"
                 required
               />
             </div>
@@ -82,7 +82,7 @@ const ContactMe: React.FC = () => {
                 name="email"
                 value={formData.email}
                 onChange={handleInputChange}
-                className="w-11/12 px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-800"
+                className="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-800"
                 required
               />
             </div>
@@ -97,7 +97,7 @@ const ContactMe: React.FC = () => {
                 name="message"
                 value={formData.message}
                 onChange={handleInputChange}
-                className="w-11/12 px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-800"
+                className="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-800"
                 rows={4}
                 required
               ></textarea>
