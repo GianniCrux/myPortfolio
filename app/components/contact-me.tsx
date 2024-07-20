@@ -24,7 +24,7 @@ const ContactMe: React.FC = () => {
   };
 
   return (
-    <div id="contact" className="ml-5 w-screen mx-auto p-6 bg-white dark:bg-black text-black dark:text-white shadow-lg">
+    <div id="contact" className="w-screen mx-auto p-6 bg-white dark:bg-black text-black dark:text-white shadow-lg">
       <h2 data-aos="fade-up" className="text-3xl font-bold mb-6">Contact Me</h2>
 
       <div className=" gap-8">

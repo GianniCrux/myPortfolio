@@ -37,7 +37,7 @@ export default function HomePage() {
 
 
   return (
-    <div id='home' className="ml-4 min-h-screen bg-white dark:bg-black pt-10">
+    <div id='home' className="min-h-screen bg-white dark:bg-black pt-10">
       <RandomLines />
 
       <div className="container mx-auto px-4 py-8 relative z-10">
