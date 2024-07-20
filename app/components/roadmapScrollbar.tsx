@@ -49,7 +49,9 @@ const RoadmapScrollbar: React.FC<{ sections: Section[] }> = ({ sections }) => {
         <div
           key={section.id}
           className={`w-4 h-4 rounded-full cursor-pointer ${
-            index === activeSection ? 'bg-green-500' : 'bg-gray-300'
+            index === activeSection 
+            ? 'bg-green-500' 
+            : 'bg-gray-300 dark:bg-white hover:bg-gray-400 dark:hover:bg-gray-200'
           }`}
           onClick={() => scrollToSection(index)}
           title={section.title}
